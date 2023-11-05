@@ -1,0 +1,358 @@
+:root {
+  --clr-primary-100: hsla(353, 81%, 51%, 1);
+}
+
+.navbar-background {
+  /* background-color: linear-gradient(to right, #111219, #12131900); */
+  background-image: url("./assets/img/mobile/navbar/navbar-bg-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.top-arch::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 4rem;
+  background-color: white;
+  top: 16.2%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.bottom-arch::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 4rem;
+  background-color: white;
+  top: 70.2%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.big-main-line::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 520px;
+  top: 43.1%;
+  left: 49.7%;
+  background-color: white;
+  transform: translateY(-50%);
+  z-index: -10;
+}
+
+.bg-color-big-main-line {
+  background-color: #15161b;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, #121319, #212439, #121319) 1;
+}
+
+/* Swiper*/
+
+.red-banner-text {
+  background: linear-gradient(45deg, #720c18, #e72234);
+  -webkit-background-clip: text; /* For Safari and older versions of Chrome */
+  background-clip: text;
+  color: transparent;
+}
+
+.swiper-button {
+  /* Background */
+  background: linear-gradient(
+    90deg,
+    rgba(231, 29, 54, 1) 39%,
+    rgba(29, 37, 84, 1) 72%
+  );
+}
+
+/* SPECIAL LEFT BORDER GRADIENT */
+
+@media screen and (min-width: 1200px) {
+  .left-border-gradient {
+    max-width: 10ch;
+    padding: 1rem;
+    height: 300px;
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(
+        to bottom,
+        hsla(231, 17%, 8%, 1),
+        hsla(231, 48%, 22%, 1),
+        hsla(353, 81%, 51%, 1)
+      )
+      0 0 0 1;
+  }
+}
+
+/* Footer */
+
+/* footer {
+  position: sticky;
+  bottom: 0;
+} */
+
+@media screen and (max-width: 680px) {
+  .footer {
+    color: var(--clr-primary-100);
+  }
+}
+
+@media screen and (min-width: 681px) {
+  .footer {
+    color: hsla(231, 32%, 39%, 1);
+  }
+}
+
+.footer {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  /* border-image: linear-gradient(to right, #121319, #212439, #121319) 1; */
+  border-image: linear-gradient(
+      to right,
+      hsla(0, 0%, 0%, 0),
+      hsla(229, 48%, 20%, 1),
+      hsla(229, 50%, 36%, 1),
+      hsla(229, 48%, 20%, 1),
+      hsla(0, 0%, 0%, 0)
+    )
+    1;
+}
+
+.footer ul li {
+  cursor: pointer;
+}
+
+.copyright {
+  color: hsla(231, 32%, 39%, 1);
+}
+
+@media screen and (max-width: 680px) {
+  .footer ul {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .footer ul li {
+    padding: 2rem;
+    /* Background */
+    background: linear-gradient(
+      to right,
+      rgba(19, 20, 27, 1),
+      rgba(20, 22, 37, 1)
+    );
+
+    /* Border */
+    border-bottom: 1px solid white;
+    border-image: linear-gradient(
+        to right,
+        rgba(26, 36, 75, 1),
+        rgba(17, 18, 24, 1)
+      )
+      1;
+  }
+
+  .footer ul li:hover {
+    padding: 2rem;
+    /* Background */
+    background: linear-gradient(
+      to right,
+      rgba(19, 20, 27, 0.717),
+      rgba(20, 22, 37, 0.036)
+    );
+
+    /* GRADIENT FOR Border */
+    border-bottom: 1px solid white;
+    border-image: linear-gradient(
+        to right,
+        rgb(75, 81, 103),
+        rgba(17, 18, 24, 1)
+      )
+      1;
+  }
+}
+
+/* About */
+
+/* Drawing Line into the diw */
+.about-div-line {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  top: 85%;
+  left: 10%;
+
+  background: linear-gradient(
+    to right,
+    rgba(231, 30, 55, 0),
+    rgba(231, 30, 55, 1),
+    rgba(231, 30, 55, 0)
+  );
+}
+
+/* Special approach for when it comes to hide a specialized div underneath a button put your gradient and z-index then finally background-color. If you dont put background color it wont work surprisingly gradient still works despite existince of background color */
+
+.button-about {
+  border: 1px solid;
+  color: var(--clr-primary-100);
+  background: linear-gradient(
+    to right,
+    rgba(24, 24, 26, 0.2),
+    rgba(69, 78, 132, 0.2)
+  );
+  z-index: 9999;
+  background-color: #121319;
+
+  box-shadow: 6px 6px 10px 0 rgba(153, 11, 11, 0.369);
+}
+
+/* Services  */
+
+.unwrapped .button-activetrigger {
+  rotate: 0deg;
+  transition: rotate 1s ease-in;
+}
+
+.wrapped .button-activetrigger {
+  rotate: 180deg;
+  transition: rotate 1s ease-in;
+}
+
+.wrapped-child {
+  /* display: block; */
+  animation: fade-in 2s;
+  -webkit-animation: fade-in 2s;
+}
+
+.unwrapped-child {
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  animation: fade-out 0.75s;
+  -webkit-animation: fade-out 0.75s;
+}
+
+/* Animation */
+
+@keyframes fade-in {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  to {
+    max-height: 60rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    max-height: 20rem;
+    opacity: 1;
+  }
+
+  to {
+    max-height: 0rem;
+    opacity: 0;
+  }
+}
+
+.top-border {
+  border-top: 1px solid transparent;
+  border-color: rgba(43, 47, 63, 1);
+}
+
+.border-for-last-child li:last-child {
+  border-bottom: 1px solid transparent;
+  border-color: rgba(43, 47, 63, 1);
+}
+
+/* nested service  */
+
+.nestedService:hover {
+  background: linear-gradient(
+    to right,
+    rgba(24, 24, 26, 0.2),
+    rgba(69, 78, 132, 0.2)
+  );
+
+  transition: color 0.5s ease-in;
+}
+
+.nestedService:hover h2 {
+  color: var(--clr-primary-100);
+
+  transition: color 0.5s ease-in;
+}
+
+.nestedService h2 {
+  color: white;
+  transition: color 0.5s ease-in;
+}
+
+.custom-max-w-xs {
+  max-width: 18rem;
+}
+
+.conditional-div {
+  /* max-width: 49%; */
+  border: 1px solid transparent;
+  border-color: rgba(231, 65, 29, 1);
+  background: linear-gradient(
+    to right,
+    rgba(231, 29, 54, 0.4),
+    rgba(231, 65, 29, 0.4)
+  );
+}
+
+.logo-box {
+  width: 100%;
+  top: -10%;
+}
+
+/* Contact */
+
+.myform,
+.myform div {
+  border-color: rgba(69, 78, 132, 1);
+}
+
+.myform input {
+  height: 2.2rem;
+  border: 1px solid transparent;
+  border-color: rgba(69, 78, 132, 1);
+  border-radius: 15px;
+  background-color: transparent;
+}
+.myform textarea {
+  border: 1px solid transparent;
+  border-color: rgba(69, 78, 132, 1);
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+.submit-button {
+  background: linear-gradient(
+    to right,
+    rgba(231, 29, 54, 1),
+    rgba(29, 37, 84, 1)
+  );
+}
+
+/* For Later On */
+.message-box {
+  opacity: 0;
+  position: absolute;
+  display: none;
+
+  left: 38%;
+}
+
+.border-bottom {
+  border-bottom: 1px solid transparent;
+}

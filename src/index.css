@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --ff-body: "Kanit", sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: hsl(231.43, 17.07%, 8.04%);
+  /* Default */
+  font-weight: 400;
+
+  /* Colors */
+
+  --clr-neutral-100: hsla(0, 0%, 100%, 1);
+  --clr-primary-100: hsla(353, 81%, 51%, 1);
+
+  /* font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%; */
+
+  /* Font Sizes */
+  --fs-primary: 18px;
+
+  /* Font Weight */
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+/* Color Class */
+
+.text-special-red {
+  color: var(--clr-primary-100);
+}
+
+/* Reseter */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Creating core default body height  */
+html,
+body {
+  height: 100vh;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  /* Interesting  */
+  /* text-rendering: optimizeSpeed; */
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  /* height: auto; */
+}
+
+/* General Styling */
+
+body {
+  font-size: var(--fs-primary);
+  font-family: var(--ff-body);
+  color: var(--clr-neutral-100);
+}
