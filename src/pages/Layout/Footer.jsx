@@ -2,6 +2,7 @@ import Logo from "../../components/Logo";
 import linkedin from "../../assets/img/icons/icon-linkedin.svg";
 import insta from "../../assets/img/icons/icon-insta.svg";
 import { IconButton } from "../../components/IconButton";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -9,9 +10,12 @@ function Footer() {
       <div className="footer flex flex-col sm:flex-row justify-between items-center text-center py-10">
         <Logo width={"w-36"}></Logo>
         <ul className=" sm:self-center flex flex-col sm:flex sm:flex-row sm:gap-24 list-none text-sm mt-6 sm:mt-0 mb-4 sm:mb-0 ">
-          <li>About</li>
-          <li>Services</li>
-          <li>References</li>
+          <li>
+            {" "}
+            <Link to="/about">About</Link>
+          </li>
+          <Link to="/services">Services</Link>
+          <Link to="/references">References</Link>
         </ul>
         <div className="hidden sm:block">
           <IconButton
