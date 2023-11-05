@@ -18,16 +18,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      const accordionItems = document.querySelectorAll(".accordion-item");
 
-      accordionItems.forEach((item) => {
-        const header = item.querySelector(".accordion-header");
-        header.addEventListener("click", () => {
-          item.classList.toggle("active");
-        });
-      });
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
