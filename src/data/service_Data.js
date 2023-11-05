@@ -1,10 +1,15 @@
+import servicepic1 from "../assets/img/icons/services/icon-Tech&Development.png";
+import servicepic2 from "../assets/img/icons/services/icon-Data.png";
+import servicepic3 from "../assets/img/icons/services/icon-Support.png";
+import servicepic4 from "../assets/img/icons/services/icon-Strategy.png";
+
 export const services = [
   {
     id: 0,
     serviceName: "Tech&Development",
     subTitle:
       "Empowering Your Digital Success: Methodical Development Solutions.",
-    iconsrc: "../src/assets/img/icons/services/icon-Tech&Development.png",
+    iconsrc: servicepic1,
     nestedService: [
       {
         nestedServiceTitle: "Software & Web Development",
@@ -47,7 +52,7 @@ export const services = [
     id: 1,
     serviceName: "Data&Insights",
     subTitle: "",
-    iconsrc: "../src/assets/img/icons/services/icon-Data.png",
+    iconsrc: servicepic2,
     nestedService: [
       {
         nestedServiceTitle: "Data Science",
@@ -65,7 +70,7 @@ export const services = [
     id: 2,
     serviceName: "Support",
     subTitle: "",
-    iconsrc: "../src/assets/img/icons/services/icon-Support.png",
+    iconsrc: servicepic3,
     nestedService: [
       {
         nestedServiceTitle: "Bug Fixing",
@@ -89,7 +94,7 @@ export const services = [
     serviceName: "Digital Strategy",
     subTitle:
       "Develop a tailored digital strategy to achieve your business objectives. We help you navigate the digital landscape and stay ahead of the competition.",
-    iconsrc: "../src/assets/img/icons/services/icon-Strategy.png",
+    iconsrc: servicepic4,
     nestedService: [
       {
         nestedServiceTitle: "IT Consulting",

@@ -16,6 +16,11 @@ import "swiper/css/pagination";
 
 // Located data here
 
+// Imgs
+
+import mainpic1 from "../assets/img/desktop/banners/mainbg.png";
+import mainpic2 from "../assets/img/desktop/banners/secondarybg.png";
+
 const swiperData = [
   {
     id: 1,
@@ -23,7 +28,7 @@ const swiperData = [
     title2: "Humbly Leads",
     subtitle:
       "We develop sustainable digital systems, crafting solutions with technology and expertise.",
-    imgsource: "../src/assets/img/desktop/banners/mainbg.png",
+    imgsource: mainpic1,
     styles: ["text-purple-500", "text-center"],
     isPositionCenter: true,
   },
@@ -33,7 +38,7 @@ const swiperData = [
     title2: "Humbly Leads",
     subtitle:
       "We develop sustainable digital systems, crafting solutions with technology and expertise.",
-    imgsource: "../src/assets/img/desktop/banners/secondarybg.png",
+    imgsource: mainpic2,
     styles: ["text-purple-500", "text-center"],
     isPositionCenter: false,
   },
