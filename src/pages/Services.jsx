@@ -1,11 +1,7 @@
-import ServicesComponent from "../components/ServicesComponent";
+// import ServicesComponent from "../components/ServicesComponent";
 
 function Services() {
-  return (
-    <>
-      <ServicesComponent></ServicesComponent>
-    </>
-  );
+  return <>{/* <ServicesComponent></ServicesComponent> */}</>;
 }
 
 export default Services;

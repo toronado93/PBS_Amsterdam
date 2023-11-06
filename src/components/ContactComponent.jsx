@@ -4,7 +4,7 @@ import Form from "./Form";
 import Info from "./Info";
 function ContactComponent() {
   return (
-    <section>
+    <section className="sm:mb-10">
       <TopDesignComponent
         title={"Communucation Form & Contact"}
         iconsrc={iconContact}

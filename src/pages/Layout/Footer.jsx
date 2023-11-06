@@ -12,10 +12,14 @@ function Footer() {
         <ul className=" sm:self-center flex flex-col sm:flex sm:flex-row sm:gap-24 list-none text-sm mt-6 sm:mt-0 mb-4 sm:mb-0 ">
           <li>
             {" "}
-            <Link to="/about">About</Link>
+            <Link to="/">About</Link>
           </li>
-          <Link to="/services">Services</Link>
-          <Link to="/references">References</Link>
+          <li>
+            <Link to="/">Services</Link>
+          </li>
+          <li>
+            <Link to="/">References</Link>
+          </li>
         </ul>
         <div className="hidden sm:block">
           <IconButton

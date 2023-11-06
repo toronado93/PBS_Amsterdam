@@ -1,11 +1,7 @@
-import ReferencesComponent from "../components/ReferencesComponent";
+// import ReferencesComponent from "../components/ReferencesComponent";
 
 function References() {
-  return (
-    <>
-      <ReferencesComponent></ReferencesComponent>
-    </>
-  );
+  return <>{/* <ReferencesComponent></ReferencesComponent> */}</>;
 }
 
 export default References;

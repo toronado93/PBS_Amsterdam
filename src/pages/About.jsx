@@ -1,11 +1,7 @@
-import AboutUs from "../components/AboutUs";
+// import AboutUs from "../components/AboutUs";
 
 function About() {
-  return (
-    <section>
-      <AboutUs></AboutUs>
-    </section>
-  );
+  return <section>{/* <AboutUs></AboutUs> */}</section>;
 }
 
 export default About;
