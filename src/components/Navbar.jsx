@@ -13,10 +13,10 @@ import insta from "../assets/img/icons/icon-insta.svg";
 import { Link } from "react-router-dom";
 
 export const navigation = [
-  { id: 1, name: "ABOUT US", to: "/about", current: false },
-  { id: 2, name: "SERVICES", to: "/services", current: false },
-  { id: 3, name: "REFERENCES", to: "/references", current: false },
-  { id: 4, name: "CONTACT", to: "/contact", current: false },
+  { id: 1, name: "ABOUT US", to: "/", current: false },
+  { id: 2, name: "SERVICES", to: "/", current: false },
+  { id: 3, name: "REFERENCES", to: "/", current: false },
+  { id: 4, name: "CONTACT", to: "/", current: false },
 ];
 
 function Navbar() {
