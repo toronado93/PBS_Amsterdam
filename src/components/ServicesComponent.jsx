@@ -3,6 +3,8 @@ import iconServices from "../assets/img/icons/icon-services.png";
 import { useState } from "react";
 import ServiceList from "./ServiceList";
 
+import { Element } from "react-scroll";
+
 // Data Source
 import services from "../data/service_Data";
 
@@ -20,27 +22,29 @@ function ServicesComponent() {
   };
 
   return (
-    <section className="container m-auto">
-      <TopDesignComponent
-        title={"Services"}
-        iconsrc={iconServices}
-      ></TopDesignComponent>
+    <Element name="#services">
+      <section className="container m-auto">
+        <TopDesignComponent
+          title={"Services"}
+          iconsrc={iconServices}
+        ></TopDesignComponent>
 
-      <div className="mt-20 w-4/5 m-auto">
-        <ul className="block w-full border-for-last-child">
-          {services.map((service) => {
-            return (
-              <ServiceList
-                key={service.id}
-                serviceData={service}
-                activetab={activetab}
-                activeHandler={activeHandler}
-              ></ServiceList>
-            );
-          })}
-        </ul>
-      </div>
-    </section>
+        <div className="mt-20 w-full m-auto">
+          <ul className="block w-full border-for-last-child">
+            {services.map((service) => {
+              return (
+                <ServiceList
+                  key={service.id}
+                  serviceData={service}
+                  activetab={activetab}
+                  activeHandler={activeHandler}
+                ></ServiceList>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+    </Element>
   );
 }
 

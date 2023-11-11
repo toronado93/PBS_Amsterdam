@@ -1,10 +1,15 @@
 /* eslint-disable react/prop-types */
 import { IconButton } from "./IconButton";
 
-function TopDesignComponent({ title, iconsrc, imgclass = "w-7 h-7" }) {
+function TopDesignComponent({
+  title,
+  iconsrc,
+  imgclass = "w-7 h-7",
+  height = "mt-14",
+}) {
   return (
     <>
-      <div className="flex flex-col relative mt-14">
+      <div className={`flex flex-col relative ${height}`}>
         <div className="ring-blue-950 ring-1 bg-slate-800 w-max rounded-full m-auto">
           <IconButton src={iconsrc} imgclass={imgclass}></IconButton>
         </div>

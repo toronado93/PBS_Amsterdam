@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useContext } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { IconButton } from "./IconButton";
@@ -11,22 +11,19 @@ import linkedin from "../assets/img/icons/icon-linkedin.svg";
 import insta from "../assets/img/icons/icon-insta.svg";
 
 import { Link } from "react-router-dom";
+import { NavbarContext } from "../context/ContextNavbar";
 
 export const navigation = [
-  { id: 1, name: "ABOUT US", to: "/", current: false },
-  { id: 2, name: "SERVICES", to: "/", current: false },
-  { id: 3, name: "REFERENCES", to: "/", current: false },
-  { id: 4, name: "CONTACT", to: "/", current: false },
+  { id: 1, name: "ABOUT US", to: "#about", current: false },
+  { id: 2, name: "SERVICES", to: "#services", current: false },
+  { id: 3, name: "REFERENCES", to: "#references", current: false },
+  { id: 4, name: "CONTACT", to: "#contact", current: false },
 ];
 
 function Navbar() {
-  // const [activeLink, setActiveLink] = useState("home");
-  // const [scrolled, setScrolled] = useState(false);
-  const [isActive, setIsActive] = useState(false);
+  const { setIsOpen } = useContext(NavbarContext);
 
-  const toogleIsActive = () => {
-    isActive ? setIsActive(false) : setIsActive(true);
-  };
+  // const [activeLink, setActiveLink] = useState("home");
 
   // useEffect(() => {
   //   const onScroll = () => {
@@ -55,7 +52,12 @@ function Navbar() {
               {/* Hamburger menu button */}
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden ">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button
+                  onClick={() => {
+                    setIsOpen(open);
+                  }}
+                  className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                >
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -83,8 +85,6 @@ function Navbar() {
                 <div className="flex space-x-4 ">
                   {navigation.map((item) => (
                     <NavigationItems
-                      toogleIsActive={toogleIsActive}
-                      isActive={isActive}
                       key={item.id}
                       item={item}
                     ></NavigationItems>

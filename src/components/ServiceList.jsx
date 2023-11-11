@@ -39,7 +39,7 @@ function ServiceList({ serviceData, activetab, activeHandler }) {
             ""
           )}
         </div>
-        <div className="flex flex-wrap gap-8 mt-12">
+        <div className="flex flex-wrap gap-8 sm:gap-2 mt-12">
           {nestedService.map((ns, _) => {
             return (
               <ServiceItem

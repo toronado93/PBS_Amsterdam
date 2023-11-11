@@ -19,7 +19,33 @@ import "swiper/css/pagination";
 // Imgs
 
 import mainpic1 from "../assets/img/desktop/banners/mainbg.png";
-import mainpic2 from "../assets/img/desktop/banners/secondarybg.png";
+
+// import mainpic2 from "../assets/img/desktop/banners/secondarybg.png";
+
+// For future slider
+
+// const swiperData = [
+//   {
+//     id: 1,
+//     title1: "Intently Innovates, ",
+//     title2: "Humbly Leads",
+//     subtitle:
+//       "We develop sustainable digital systems, crafting solutions with technology and expertise.",
+//     imgsource: mainpic1,
+//     styles: ["text-purple-500", "text-center"],
+//     isPositionCenter: true,
+//   },
+//   {
+//     id: 2,
+//     title1: "Intently Innovates, ",
+//     title2: "Humbly Leads",
+//     subtitle:
+//       "We develop sustainable digital systems, crafting solutions with technology and expertise.",
+//     imgsource: mainpic2,
+//     styles: ["text-purple-500", "text-center"],
+//     isPositionCenter: false,
+//   },
+// ];
 
 const swiperData = [
   {
@@ -38,9 +64,9 @@ const swiperData = [
     title2: "Humbly Leads",
     subtitle:
       "We develop sustainable digital systems, crafting solutions with technology and expertise.",
-    imgsource: mainpic2,
+    imgsource: mainpic1,
     styles: ["text-purple-500", "text-center"],
-    isPositionCenter: false,
+    isPositionCenter: true,
   },
 ];
 
@@ -49,11 +75,11 @@ function Slider() {
     <Swiper
       modules={[Navigation, Pagination, A11y, Autoplay]}
       //   navigation
-      pagination={{ clickable: true }}
+      // pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       spaceBetween={50}
       slidesPerView={1}
-      autoplay={{ delay: 4000 }}
+      // autoplay={{ delay: 4000 }}
       onSlideChange={() => {
         console.log("Slide is changed");
       }}
@@ -76,9 +102,9 @@ function Slider() {
             }}
           >
             <div
-              className={`banner-title mt-24 pb-56 ${
+              className={`banner-title mt-24 sm:pb-56 ${
                 slides.isPositionCenter ? "text-center" : "ml-8 text-left"
-              } mt-24 pb-56`}
+              } mt-24 sm:pb-56`}
             >
               <h1 className="text-3xl md:text-7xl font-bold">
                 {slides.title1}
