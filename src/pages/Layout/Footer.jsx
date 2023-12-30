@@ -2,9 +2,11 @@ import Logo from "../../components/Logo";
 import linkedin from "../../assets/img/icons/icon-linkedin.svg";
 import insta from "../../assets/img/icons/icon-insta.svg";
 import { IconButton } from "../../components/IconButton";
-import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { NavbarContext } from "../../context/ContextNavbar";
+
+import { Link as ScrollLink } from "react-scroll";
+
 function Footer() {
   const { isOpen } = useContext(NavbarContext);
 
@@ -14,17 +16,37 @@ function Footer() {
       {isOpen ? (
         <footer className=" container m-auto ">
           <div className="footer flex flex-col sm:flex-row justify-between items-center text-center py-10">
-            <Logo width={"w-36"}></Logo>
+            <Logo width="w-36"></Logo>
             <ul className=" sm:self-center flex flex-col sm:flex sm:flex-row sm:gap-24 list-none text-sm mt-6 sm:mt-0 mb-4 sm:mb-0 ">
               <li>
-                {" "}
-                <Link to="/">About</Link>
+                <ScrollLink
+                  className="cursor-pointer transition ease-in-out delay-150 hover:text-white"
+                  to="#about"
+                  smooth={true}
+                  duration={500}
+                >
+                  About
+                </ScrollLink>
               </li>
               <li>
-                <Link to="/">Services</Link>
+                <ScrollLink
+                  className="cursor-pointer transition ease-in-out delay-150 hover:text-white"
+                  to="#services"
+                  smooth={true}
+                  duration={500}
+                >
+                  Services
+                </ScrollLink>
               </li>
               <li>
-                <Link to="/">References</Link>
+                <ScrollLink
+                  className="cursor-pointer transition ease-in-out delay-150 hover:text-white"
+                  to="#services"
+                  smooth={true}
+                  duration={500}
+                >
+                  References
+                </ScrollLink>
               </li>
             </ul>
             <div className="hidden sm:block">

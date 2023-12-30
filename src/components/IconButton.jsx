@@ -1,7 +1,12 @@
 /* eslint-disable react/prop-types */
-export const IconButton = ({ info, src, imgclass }) => {
+export const IconButton = ({ info, src, imgclass, link }) => {
   return (
     <button
+      onClick={() => {
+        if (link) {
+          window.open(link);
+        }
+      }}
       type="button"
       className="relative rounded-full p-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2  focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
     >

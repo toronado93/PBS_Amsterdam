@@ -32,7 +32,7 @@
   z-index: 1;
 }
 
-.big-main-line::after {
+/* .big-main-line::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -49,7 +49,7 @@
   border-top: 1px solid;
   border-bottom: 1px solid;
   border-image: linear-gradient(to right, #121319, #212439, #121319) 1;
-}
+} */
 
 /* Swiper*/
 
@@ -246,7 +246,8 @@
     rgba(24, 24, 26, 0.2),
     rgba(69, 78, 132, 0.2)
   );
-  z-index: 9999;
+  /* Navbar has z-index:50 */
+  z-index: 49;
   background-color: #121319;
 
   /* box-shadow: 6px 6px 10px 0 rgba(153, 11, 11, 0.369); */
@@ -313,6 +314,17 @@
 .border-for-last-child li:last-child {
   border-bottom: 1px solid transparent;
   border-color: rgba(43, 47, 63, 1);
+}
+
+/* Parent Service */
+
+.parentService p {
+  color: white;
+  transition: color 0.5s ease-in;
+}
+.parentService:hover p {
+  color: var(--clr-primary-100);
+  transition: color 0.5s ease-in;
 }
 
 /* nested service  */

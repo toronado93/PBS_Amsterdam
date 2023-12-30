@@ -6,12 +6,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { IconButton } from "./IconButton";
 import NavigationItems from "./NavigationItems";
 import HamburgerMenu from "./HamburgerMenu";
-import logo from "../assets/img/logo/amsterdam1.png";
 import linkedin from "../assets/img/icons/icon-linkedin.svg";
 import insta from "../assets/img/icons/icon-insta.svg";
 
 import { Link } from "react-router-dom";
 import { NavbarContext } from "../context/ContextNavbar";
+import Logo from "./Logo";
 
 export const navigation = [
   { id: 1, name: "ABOUT US", to: "#about", current: false },
@@ -42,7 +42,10 @@ function Navbar() {
   // }, []);
 
   return (
-    <Disclosure as="nav" className="navbar-background py-3 pb-5">
+    <Disclosure
+      as="nav"
+      className="navbar-background py-3 pb-5 sticky top-3 sm:static sm:top-0 z-50 "
+    >
       {({ open }) => (
         <>
           <div
@@ -68,14 +71,13 @@ function Navbar() {
                 </Disclosure.Button>
               </div>
 
-              <div className="flex flex-1 sm:flex-none items-center justify-center sm:items-stretch sm:justify-start ">
+              {/* Mobile Bar */}
+              <div className="flex flex-1 sm:flex-none items-center justify-center sm:items-stretch sm:justify-start   ">
                 <div className="flex flex-shrink-0 items-center iconic-sultan-container">
                   <Link to={"/"}>
-                    <img
-                      className="w-28 h-auto"
-                      src={logo}
-                      alt="pbsAmsterdam"
-                    />
+                    <Disclosure.Button>
+                      <Logo width="w-34"></Logo>
+                    </Disclosure.Button>
                   </Link>
                 </div>
               </div>
@@ -100,6 +102,7 @@ function Navbar() {
                       info={"Linkedin"}
                       src={linkedin}
                       imgclass={"h-5 w-5 opacity-50"}
+                      link={"https://pbsamsterdam.com/"}
                     ></IconButton>
                     <IconButton
                       info={"Insta"}

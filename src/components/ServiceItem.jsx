@@ -10,7 +10,7 @@ function ServiceItem({ nestedService }) {
         <img src={iconEllipse}></img>
       </div>
       <div className="custom-max-w-xs">
-        <h2 className="text-base mb-2">{nestedServiceTitle}</h2>
+        <h2 className="text-base mb-2 ">{nestedServiceTitle}</h2>
         <p className=" text-sm opacity-70">{nestedServiceParag}</p>
       </div>
     </div>

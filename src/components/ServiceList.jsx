@@ -13,9 +13,16 @@ function ServiceList({ serviceData, activetab, activeHandler }) {
       }`}
     >
       <div className="container flex justify-between gap-10 w-full top-border ">
-        <div className="flex gap-1 ">
+        <div className="flex gap-1 parentService">
           <IconButton imgclass={"h-12 w-12"} src={iconsrc}></IconButton>
-          <p className="self-center">{serviceName}</p>
+          <p
+            onClick={() => {
+              activeHandler(id);
+            }}
+            className="self-center cursor-pointer hover:text-red-600"
+          >
+            {serviceName}
+          </p>
         </div>
         <button
           onClick={() => {

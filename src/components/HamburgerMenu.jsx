@@ -2,7 +2,7 @@
 import { Disclosure } from "@headlessui/react";
 import TopArch from "../assets/img/mobile/navbar/navbar-arch-top.png";
 import BottomArch from "../assets/img/mobile/navbar/navbar-arch-bottom.png";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 export function HamburgerMenu({ navigation }) {
   return (
@@ -15,9 +15,15 @@ export function HamburgerMenu({ navigation }) {
         ></img>
         <div className="flex flex-col gap-20 max-w-max ">
           {navigation.map((item) => (
-            <Link key={item.id} to={item.to}>
+            <ScrollLink
+              key={item.id}
+              to={item.to}
+              smooth={true}
+              duration={500}
+              offset={-950}
+            >
               <Disclosure.Button>{item.name}</Disclosure.Button>
-            </Link>
+            </ScrollLink>
           ))}
           {/* {navigation.map((item) => (
             <Disclosure.Button

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link as ScrollLink } from "react-scroll";
 
 // import mainbg from "../assets/img/desktop/banners/mainbg.png";
 // import secondarybg from "../assets/img/desktop/banners/secondarybg.png";
@@ -80,12 +81,12 @@ function Slider() {
       spaceBetween={50}
       slidesPerView={1}
       // autoplay={{ delay: 4000 }}
-      onSlideChange={() => {
-        console.log("Slide is changed");
-      }}
-      onSwiper={(swiper) => {
-        console.log(swiper);
-      }}
+      // onSlideChange={() => {
+      //   console.log("Slide is changed");
+      // }}
+      // onSwiper={(swiper) => {
+      //   console.log(swiper);
+      // }}
     >
       {swiperData.map((slides) => (
         <SwiperSlide key={slides.id}>
@@ -120,7 +121,9 @@ function Slider() {
                 {slides.subtitle}
               </p>
               <button className="swiper-button text-base border border-red-800 rounded-lg  mt-6 px-4 py-1 ">
-                Let's Meet
+                <ScrollLink to="#contact" smooth={true} duration={500}>
+                  Let's Meet
+                </ScrollLink>
               </button>
             </div>
           </div>

@@ -11,19 +11,12 @@ function Home() {
   const { isOpen } = useContext(NavbarContext);
   return (
     <>
-      {" "}
-      {isOpen ? (
-        <>
-          <Banner></Banner>
-          {/* <Main></Main> */}
-          <AboutUs></AboutUs>
-          <ServicesComponent></ServicesComponent>
-          <ReferencesComponent></ReferencesComponent>
-          <ContactComponent></ContactComponent>
-        </>
-      ) : (
-        ""
-      )}
+      <Banner></Banner>
+      {/* <Main></Main> */}
+      <AboutUs></AboutUs>
+      <ServicesComponent></ServicesComponent>
+      <ReferencesComponent></ReferencesComponent>
+      <ContactComponent></ContactComponent>
     </>
   );
 }

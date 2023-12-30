@@ -17,7 +17,7 @@ function NavigationItems({ item }) {
     // </Link>
 
     <ScrollLink
-      className="cursor-pointer"
+      className="cursor-pointer transition ease-in-out delay-150 hover:text-red-600"
       to={item.to}
       smooth={true}
       duration={500}
